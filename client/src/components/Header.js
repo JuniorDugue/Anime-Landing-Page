@@ -10,6 +10,7 @@ function Header({ data }) {
     <div className="header">
       <motion.h1 
       animate={{fontSize: 40, color: 'orange', }}
+      transition={{delay: .1, type: 'spring', stiffness: 320}}
       >
       Jr's Anime Landing Page</motion.h1>
       <motion.img 
