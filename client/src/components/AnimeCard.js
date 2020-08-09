@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 function AnimeCard({ data }) {
   return (
@@ -14,9 +15,9 @@ function AnimeCard({ data }) {
         return (
           <div key={anime.id}>
             <img className="card-poster" src={medium} alt="poster" />
-            <h2 className="card-title">{canonicalTitle}</h2>
-            <p className="card-description">{synopsis.substring(0, 150)}....</p>
-            <p className="card-rating">{averageRating}</p>
+            <motion.h2 className="card-title">{canonicalTitle}</motion.h2>
+            <motion.p className="card-description">{synopsis.substring(0, 150)}....</motion.p>
+            <motion.p className="card-rating">{averageRating}</motion.p>
           </div>
         );
       })}

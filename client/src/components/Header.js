@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 function Header({ data }) {
   let {
@@ -7,8 +8,14 @@ function Header({ data }) {
 
   return (
     <div className="header">
-      <h1>Jr's Anime Landing Page</h1>
-      <img className="header-img" src={small} alt="banner" />
+      <motion.h1 
+      animate={{fontSize: 40, color: 'orange', }}
+      >
+      Jr's Anime Landing Page</motion.h1>
+      <motion.img 
+      animate={{ scale: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      className="header-img" src={small} alt="banner" />
     </div>
   );
 }
