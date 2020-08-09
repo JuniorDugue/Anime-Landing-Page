@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 
+  // main container for the animecards
   .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -16,19 +17,30 @@
         text-align: center;
       }
     }
-
+    // anime images
     .card-poster {
       max-width: 100%;
       height: auto;
     }
+    // anime title
+    .card-title {
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+    // anime ratings
+    .card-rating {
+      color: orange;
+    }
   }
 
-  .card-title {
-    border-radius: 10px;
-    font-size: 1.2rem;
-  }
+  // header
+  .header {
+    margin-bottom: 2rem;
 
-  .card-rating{
-    color: orange;
+    // banner image in the header
+    .header-img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 }
