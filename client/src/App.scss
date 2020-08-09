@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1.8rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.8rem;
+    text-align: left;
+
+    @media screen and (max-width: 600px) {
+      .card-container {
+        text-align: center;
+      }
+    }
+
+    .card-poster {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .card-title {
+    border-radius: 10px;
+    font-size: 1.2rem;
+  }
+
+  .card-rating{
+    color: orange;
+  }
+}
