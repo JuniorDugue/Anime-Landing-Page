@@ -18,8 +18,19 @@ function App() {
       <h1>Anime Landing Page</h1>
       <div>
         {data.data.map(anime => {
+          let {
+            canonicalTitle,
+            averageRating,
+            synopsis,
+            posterImage: {medium}
+          } = anime.attributes
           return (
-            <h2>{anime.attributes.canonicalTitle}</h2>
+            <div key={anime.id}>
+              <img src={medium} alt="poster"/>
+              <h2>{canonicalTitle}</h2>
+              <p>{synopsis}</p>
+              <p>{averageRating}</p>
+            </div>
           )
         })}
       </div>
